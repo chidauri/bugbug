@@ -344,6 +344,7 @@ class Model:
         feature_names = self.get_human_readable_feature_names()
         if self.calculate_importance and len(feature_names):
             explainer = shap.TreeExplainer(self.clf)
+            print("hello.....................................................\n")
             shap_values = explainer.shap_values(X_train)
 
             shap.summary_plot(
